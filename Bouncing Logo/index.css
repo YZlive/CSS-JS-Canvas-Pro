@@ -1,0 +1,67 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd {
+  margin: 0;
+  font-family: "微软雅黑";
+}
+body {
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #fff;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main {
+  display: block;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+mark {
+  background-color: none;
+}
+img {
+  vertical-align: top;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f13;
+  overflow: hidden;
+  position: relative;
+}
+#label {
+  position: absolute;
+  /* 
+  calc()函数用于动态计算长度值 
+  1、运算符前后需要保留一个空格
+  2、支持“+”、“-”、“*”、“/”运算
+  3、使用标准的数学运算优先级规则
+  4、任何长度值都可以使用该函数进行计算
+  */
+
+  /* left: calc(50vw - 150px); */
+  /* top: calc(50vh - 28px); */
+  width: 300px;
+  height: 56px;
+}

@@ -1,0 +1,185 @@
+:root {
+  --blue: #403b6b;
+  --yellow: white;
+}
+body {
+  background: #e486bb;
+}
+.box-canvas {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 50vmin;
+  margin-bottom: 50vmin;
+  width: 80vmin;
+  height: 80vmin;
+}
+.bag {
+  top: 30vmin;
+  position: absolute;
+  width: 80vmin;
+  height: 60vmin;
+  background: var(--blue);
+  border-radius: 2%;
+}
+
+.handle {
+  position: absolute;
+  left: 15vmin;
+  height: 10vmin;
+  width: 50vmin;
+  background: var(--yellow);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.handle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1vmin;
+  bottom: 1vmin;
+  border: 2px dashed var(--blue);
+}
+
+.vertical-strap {
+  position: absolute;
+  bottom: 0;
+  height: 80vmin;
+  width: 10vmin;
+  background: var(--yellow);
+}
+.vertical-strap::before {
+  content: "";
+  position: absolute;
+  top: 1vmin;
+  bottom: 1vmin;
+  width: 5vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px dashed var(--blue);
+  border-top: none;
+}
+.vertical-strap:nth-child(1) {
+  left: 15vmin;
+}
+.vertical-strap:nth-child(2) {
+  right: 15vmin;
+}
+
+.horizontal-section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20vmin;
+  background: var(--yellow);
+  border-radius: 0 0 2% 2%;
+}
+.horizontal-section::before {
+  content: "";
+  position: absolute;
+  top: 1vmin;
+  bottom: 1vmin;
+  left: 0;
+  right: 0;
+  border-top: 2px dashed var(--blue);
+}
+.baguette {
+  position: absolute;
+  transform: rotate(45deg);
+  top: 25vmin;
+  left: -30vmin;
+  width: 80vmin;
+  height: 10vmin;
+  background: #fcb648;
+  border-radius: 10% / 50%;
+}
+
+.baguette::before {
+  content: "";
+  position: absolute;
+  width: 8vmin;
+  height: 3vmin;
+  background: #fce3ab;
+  transform: rotate(45deg);
+  left: 5vmin;
+  top: 3.5vmin;
+  border-radius: 50%;
+}
+.baguette::after {
+  content: "";
+  position: absolute;
+  width: 8vmin;
+  height: 3vmin;
+  background: #fce3ab;
+  transform: rotate(45deg);
+  left: 15vmin;
+  top: 3vmin;
+  border-radius: 50%;
+}
+
+.tear {
+  position: absolute;
+  width: 8vmin;
+  height: 3vmin;
+  background: #fce3ab;
+  transform: rotate(45deg);
+  left: 25vmin;
+  top: 3vmin;
+  border-radius: 50%;
+}
+
+.tear::before {
+  content: "";
+  position: absolute;
+  width: 8vmin;
+  height: 3vmin;
+  background: #fce3ab;
+  top: -7vmin;
+  left: 8vmin;
+  border-radius: 50%;
+}
+
+.box {
+  position: absolute;
+  left: 20vmin;
+  top: 20vmin;
+  width: 25vmin;
+  height: 40vmin;
+  background: #abe240;
+  border-radius: 5%;
+  transform: rotate(10deg);
+}
+
+.bottle {
+  position: absolute;
+  right: 3vmin;
+  transform: rotate(10deg);
+  top: 10vmin;
+  width: 20vmin;
+  height: 50vmin;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.9)
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5) 10vmin,
+    rgba(255, 255, 255, 0.8) 10vmin
+  );
+  border-radius: 30%;
+}
+
+.bottle::before {
+  content: "";
+  position: absolute;
+  width: 5vmin;
+  height: 5vmin;
+  background: var(--blue);
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5vmin;
+  border-radius: 20% 20% 0 0;
+}
